@@ -1,0 +1,77 @@
+footer {
+    background-color: #0B0D17;
+    color: white;
+    padding: 100px 0% 0px 0%;
+}
+
+footer .main-footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid rgba(256, 256, 256, 0.5);
+    padding: 0px 3% 50px 4.7%;
+}
+
+footer .main-footer h5{
+    margin-bottom: 20px;
+}
+
+footer .main-footer ul {
+    padding: 0px;
+}
+
+footer .main-footer ul li{
+    padding: 7px 0px;
+}
+
+footer .main-footer ul li a {
+    padding: 0px;
+    color: white;
+    transition: 0.5s ease-in-out;
+    display: inline;
+}
+
+footer .main-footer ul li a img{
+    width: 150px;
+    margin-right: 20px;
+}
+
+footer .main-footer ul li a:hover {
+    padding: 0px;
+    color: #00302E;
+    background-color: transparent;
+    padding-left: 10px;
+}
+
+footer .sub-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 3% 10px 4.7%;
+}
+
+.sub-footer p {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+footer .sub-footer .icons {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 50px;
+}
+
+footer .sub-footer .icon{
+    font-size: 30px;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-top: -25px;
+    background-color: rgba(256, 256, 256, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

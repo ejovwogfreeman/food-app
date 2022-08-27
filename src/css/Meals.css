@@ -1,0 +1,24 @@
+.meals-container {
+    text-align: center;
+    background-color: #00302E;
+    color: white;
+    padding: 100px 3% 100px 4.7%;
+}
+
+.meals-container .meals-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    margin-top: 100px;
+}
+
+.meals-container .meals-box h3 {
+    color: #E2B887;
+}
+
+.meals-container .meals-box .meals img {
+    width: 60%;
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+}

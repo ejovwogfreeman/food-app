@@ -1,0 +1,36 @@
+header {
+    background-color: #00302E;
+    color: white;
+    padding: 200px 3% 120px 4.7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-text {
+    flex: 1;
+}
+
+.header-text h1 {
+    font-size: 60px;
+}
+
+.header-text .download {
+    display: flex;
+    align-items: center;
+}
+
+.header-text .download img {
+    width: 150px;
+    margin-right: 20px;
+}
+
+.header-img {
+    flex: 1;
+}
+
+.header-img img {
+    width: 60%;
+    margin: auto;
+    display: block;
+}

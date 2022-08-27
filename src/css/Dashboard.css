@@ -1,0 +1,15 @@
+.dashboard-container {
+    display: flex;
+}
+
+.dashboard-container .left {
+    flex: 1;
+    background-color: red;
+    padding: 100px 3% ;
+}
+
+.dashboard-container .right {
+    flex: 3;
+    background-color: greenyellow;
+    padding: 100px 3% ;
+}
