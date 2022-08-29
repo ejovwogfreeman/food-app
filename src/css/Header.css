@@ -34,3 +34,44 @@ header {
     margin: auto;
     display: block;
 }
+
+@media screen and (max-width: 780px) {
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+
+    .header-text h1 {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        padding: 150px 3% 60px 4.7%;
+    }
+
+    br {
+        display: none;
+
+    }
+
+    .header-text .download {
+        display: block;
+    }
+    .header-text .download img {
+        width: 150px;
+        margin-right: 20px;
+    }
+
+    
+}
+

@@ -40,3 +40,31 @@
     padding: 10px;
     margin-left: 10px;
 }
+
+@media screen and (max-width: 780px) {
+    .newsletter-container {
+        display: block;
+        text-align: center;
+        padding: 50px;
+    } 
+
+    .newsletter-container .newsletter-form input {
+        flex: 2;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .newsletter-container {
+        padding: 50px 3% 50px;
+    } 
+
+    .newsletter-container .newsletter-form input {
+        font-size: 14px;
+        padding: 5px;
+    }
+    .newsletter-container .newsletter-form button {
+        font-size: 14px;
+        padding: 5px;
+        margin-left: 5px;
+    }
+}

@@ -75,3 +75,40 @@ footer .sub-footer .icon{
     align-items: center;
     justify-content: center;
 }
+
+@media screen and (max-width: 780px) {
+    footer {
+        padding-top: 20px;
+    }
+
+    footer .main-footer {
+        display: block;
+    }
+
+    footer .main-footer div {
+        margin-top: 20px;
+        border-bottom: 1px solid rgba(256, 256, 256, 0.5);
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    footer .sub-footer {
+        display: block;
+    }
+
+    footer .sub-footer .icons {
+        justify-content: start;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        margin-left: 0px;
+        padding: 0px;
+    }   
+  
+    footer .sub-footer .icon {
+        margin-left: 0px;
+        margin-right: 10px;
+    }   
+
+}

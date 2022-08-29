@@ -37,7 +37,7 @@ const Footer = () => {
                     <li><a href="">Dispute resolution</a></li>
                 </ul>
             </div>
-            <div>
+            <div style={{borderBottom: '0px'}}>
                 <h5>Install App</h5>
                 <ul>
                     <li><a href=""><img src={img1} alt="" /></a></li>

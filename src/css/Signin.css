@@ -40,7 +40,6 @@
     display: block;
     width: 100%;
     padding: 5px 10px;
-    margin-bottom: 30px;
 }
 
 .signin-container .signin-text form button {
@@ -51,7 +50,7 @@
     color: white; 
     background-color: #00302E;
     padding: 7px 10px;
-    margin-bottom: 30px;
+    /* margin-top: 50px; */
     transition: 0.5s ease-in-out;
 }
 
@@ -66,4 +65,25 @@
     align-items: center;
 }
 
+.eye-cont {
+    position: relative;
+    height: 10px;
+    margin-bottom: 50px;
+}
 
+/* .eye .input {
+    display: block;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    width: 30px
+} */
+
+.btnShow {
+    position: absolute;
+    top: 60%;
+    right: 3%;
+    margin-left: 0px;
+    cursor: pointer;
+    font-size: 25px;
+    display: block;
+}

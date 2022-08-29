@@ -16,7 +16,18 @@ import { HiOutlineShoppingCart } from 'react-icons/hi'
 
 
 const Dashboard = () => {
-  let user = 'Sarah Smith' 
+  let user = JSON.parse(sessionStorage.getItem('user'))
+  let timeDay = new Date().getHours()
+  let timeGreet = null;
+  if(timeDay < 12) {
+    timeGreet = "Good Morinng"
+  }else if(timeDay < 16) {
+    timeGreet = "Good Afternoon"
+  }else if(timeDay < 21){
+    timeGreet = "Good Evening"
+  }else {
+    timeGreet = "Good Night"
+  }
 
   const meals = [
     {
@@ -84,8 +95,8 @@ const Dashboard = () => {
       </div>
       <div className="right">
         <div className="profile-head">
-          <div className="user-name">s
-            <h3>Good Morning, {user}!</h3>
+          <div className="user-name">
+            <h3>{timeGreet}, {user?.name}!</h3>
             <p>What delicious meal are you craving today?</p>
           </div>
           <img src={img7} alt="" /> 

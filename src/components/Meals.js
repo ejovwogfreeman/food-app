@@ -29,7 +29,7 @@ const Meals = () => {
   return (
     <div className='meals-container'>
         <h2>Special Meals of the day!</h2>
-        <p>
+        <p className='p'>
             Check our special meals of the day and get discounts on all our meals <br />
             and swift delivery to every location in within Ilorin.
         </p>

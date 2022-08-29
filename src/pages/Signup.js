@@ -1,32 +1,97 @@
-import React from 'react'
+import React, { useState } from 'react'
 import img from '../assets/signup.png'
 import '../css/Signin.css'
 import { Link } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 
 const Signup = () => {
+
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    password: ''
+  })
+
+  const [passwordType, setpasswordType] = useState("password");
+
+  const togglePassword = (e) => {
+    e.preventDefault();
+    if (passwordType === "password") {
+      setpasswordType("text");
+      return;
+    }
+    setpasswordType("password");
+  };
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  console.log(form)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    sessionStorage.setItem('user', JSON.stringify(form))
+
+    toast.success("Sign Up Successful")
+
+    setInterval(() => {
+      window.location= '/signin'
+    }, 1500);
+    
+  }
+
   return (
     <div className='signin-container' >
+        <ToastContainer />
         <div className="signin-img">
           <div className='light'>
           </div>
             <img src={img} alt="" />
         </div>
         <div className="signin-text">
-          <form action="">
+          <form onSubmit={handleSubmit}>
             <h1>Welcome to Lilies!</h1>
-            <input 
-              type="text" 
-              placeholder = "Your Full Name"
-            />
-            <input 
-              type="email" 
-              placeholder = "Your Email address"
-            />
-            <input 
-              type="password" 
-              placeholder='Your Password'
-            />
-            <button>SIGN UP</button>
+            <div className='eye-cont'>
+              <input 
+                type="text" 
+                placeholder = "Your Full Name"
+                onChange={handleChange} 
+                name = 'name'
+                required
+              />
+            </div>
+            <div className='eye-cont'>
+              <input 
+                type="email" 
+                placeholder = "Your Email address"
+                onChange={handleChange}
+                name = 'email'
+                required
+              />
+            </div>
+            <div className='eye-cont'>
+              <input   
+                className='input'
+                type={passwordType}
+                placeholder="Your Password" 
+                onChange={handleChange}
+                name="password"
+                required
+                />
+                {passwordType === "password" ?
+                  <AiFillEye className="btnShow" onClick={togglePassword}/> :
+                  <AiFillEyeInvisible className="btnShow" onClick={togglePassword}/>
+                }
+            </div>
+            <div className='eye-cont'>
+              <button>SIGN UP</button>
+            </div>
             <p>Already have an account? <Link to="/signin">LOGIN</Link> </p>
           </form>
          </div>

@@ -22,3 +22,24 @@
     margin: auto;
     margin-bottom: 30px;
 }
+
+
+@media screen and (max-width: 780px) {
+
+    .meals-container {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    .meals-container .meals-box {
+        display: block;
+    }
+
+    .meals-container .p {
+        margin-bottom: -50px;
+    } 
+    
+    .meals-container .meals-box .meals {
+        margin-bottom: 50px;
+    }
+}
