@@ -1,15 +1,129 @@
 .dashboard-container {
-    display: flex;
+  display: flex;
 }
 
 .dashboard-container .left {
-    flex: 1;
-    background-color: red;
-    padding: 100px 3% ;
+  flex: 1;
+  background-color: whitesmoke;
+  padding: 100px 3%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100vh;
+}
+
+.dashboard-container .left .logo a{
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-container .left .logo a:hover{
+    color: black;
+}
+
+.dashboard-container .left .logo img{
+    width: 50px;
+    display: block;
+}
+
+.dashboard-container .left .logo h2{
+    margin-top: auto;
+    margin-left: 20px;
+}
+  
+.dashboard-container .left ul{
+    padding: 0px;
+    margin-top: 10px;
+}
+
+.dashboard-container .left ul li{
+    margin: 5px 0px;
+    position: relative;
+}
+
+.dashboard-container .left ul li a{
+    background-color: transparent;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.dashboard-container .left ul li a:hover{
+    background-color: rgb(228, 226, 226);
+    color: black;
+}
+
+.dashboard-container .left ul li a .icon{
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.dashboard-container .left ul li .x{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    right: 20px;
+    position: absolute;
 }
 
 .dashboard-container .right {
-    flex: 3;
-    background-color: greenyellow;
-    padding: 100px 3% ;
+  flex: 4;
+  padding: 100px 3%;
+  /* width: 75%; */
+  margin-left: 25%;
+}
+
+.dashboard-container .right .profile-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.dashboard-container .right .profile-head img{
+    display: block;
+}
+
+
+.dashboard-container .right .meals-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    text-align: center;
+}
+
+.dashboard-container .right .meals-box h3 {
+    color: #E2B887;
+}
+
+.dashboard-container .right .meals-box .meals img {
+    width: 60%;
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.dashboard-container .right .meals-box .price-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-container .right .meals-box .price-action button {
+    border: none;
+    outline: none;
+    color: #06E775;
+    border: 1px solid #06E775;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+}
+
+.dashboard-container .right .meals-box .price-action button:hover {
+    color: white;
+    background-color: #06E775;
 }

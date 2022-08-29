@@ -52,6 +52,12 @@
     background-color: #00302E;
     padding: 7px 10px;
     margin-bottom: 30px;
+    transition: 0.5s ease-in-out;
+}
+
+.signin-container .signin-text form button:hover {
+    color: black;
+    background-color: #E2B887;
 }
 
 .signin-container .signin-text form .links {

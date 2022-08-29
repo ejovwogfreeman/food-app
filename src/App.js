@@ -9,6 +9,10 @@ import Home from "./pages/Home";
 import Signup from "./pages/Signup";
 import Signin from "./pages/Signin";
 import Dashboard from "./pages/Dashboard";
+import SingleFood from "./pages/SingleFood";
+import Checkout from "./pages/Checkout";
+import Cart from "./pages/Cart";
+import Orders from "./pages/Orders";
 
 function App() {
   
@@ -82,6 +86,22 @@ function App() {
           <Route
             path='/dashboard'
             element = {<Dashboard/>}
+          />
+          <Route
+            path='/singlefood'
+            element = {<SingleFood/>}
+          />
+          <Route
+            path='/checkout'
+            element = {<Checkout/>}
+          />
+          <Route
+            path='/cart'
+            element = {<Cart/>}
+          />
+          <Route
+            path='/orders'
+            element = {<Orders/>}
           />
         </Routes>
         <Box

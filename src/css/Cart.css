@@ -1,0 +1,102 @@
+.cart-container {
+    position: relative;
+}
+
+.cart-container .cart {
+    overflow-y: hidden;
+    height: 100vh;
+}
+
+.cart-container .bg-color {
+    background-color: rgba(0, 0, 0, 0.3); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.cart-container .cart-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: white;
+    padding: 0px 50px;
+    font-size: 14px;
+    padding-top: 40px;
+    overflow-y: scroll;
+}
+
+.cart-container .cart-box .items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cart-container .cart-box .items .image{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-container .cart-box .items .image .title{
+    margin-left: 20px;
+}
+
+.cart-container .cart-box .items .image .title button{
+    border: none;
+    outline: none;
+    color: #e73b06;
+    border: 1px solid #e73b06;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+}
+
+.cart-container .cart-box .items .image .title button:hover{
+    color: white;
+    background-color: #e73b06;
+}
+
+.cart-container .cart-box .items .quantity{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.cart-container .cart-box p {
+    font-size: 16px;
+    display: flex;
+    justify-content: right;
+}
+
+.cart-container .cart-box .button {
+    display: block;
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    border: none;
+    outline: none;
+    color: white; 
+    background-color: #00302E;
+    padding: 7px 10px;
+    transition: 0.5s ease-in-out;
+}
+
+.cart-container .cart-box .button:hover {
+    color: black;
+    background-color: #E2B887;
+}
+
+.delivered {
+    color: #06E775;
+}
+
+.cooking {
+    color: #e73b06;
+}

@@ -15,8 +15,8 @@ const Signup = () => {
           <form action="">
             <h1>Welcome to Lilies!</h1>
             <input 
-              type="email" 
-              placeholder = "Your First Name"
+              type="text" 
+              placeholder = "Your Full Name"
             />
             <input 
               type="email" 

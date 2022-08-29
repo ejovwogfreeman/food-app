@@ -1,5 +1,5 @@
 import React, { useEffect, Suspense, lazy } from "react";
-import "../css/Home.css";
+// import "../css/Home.css";
 import Navbar from '../components/Navbar'
 import Header from '../components/Header'
 import Meals from '../components/Meals'
