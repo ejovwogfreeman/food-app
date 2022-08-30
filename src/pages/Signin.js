@@ -36,16 +36,12 @@ const handleSubmit =(e) => {
 
   e.preventDefault()
   let user = JSON.parse(sessionStorage.getItem('user'))
-  
-  console.log(loginData.email, loginData.password)
-  console.log(user.email, user.password)
 
   if (loginData?.email == user?.email && loginData?.password == user?.password){
     toast.success("Login Successful")
-    // setInterval(() => {
-      navigate('/dashboard')
-    // }, 2000);
-    
+
+    navigate('/dashboard')
+   
   }else{
     toast.error("Wrong email or password")
   }
