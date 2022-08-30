@@ -11,8 +11,8 @@ const MuiDrawer = () => {
   const [ openDrawer, setOpenDrawer ] = useState(false)
   return (
     <>
-        <IconButton size="large" edge="start" color="inherit" aria-label='logo' onClick={()=> setOpenDrawer(true)}>
-            <MenuIcon style={{color: 'white', fontSize:'35px', marginTop: '20px'}}/>
+        <IconButton size="large" edge="start" color="inherit" aria-label='logo' onClick={()=> setOpenDrawer(true)} style={{marginTop: '22px'}}>
+            <MenuIcon style={{color: 'white', fontSize:'35px'}}/>
         </IconButton>
         <Drawer anchor="bottom" open={openDrawer} onClose={()=> setOpenDrawer(false)} >
             <div className='close-icon'>
