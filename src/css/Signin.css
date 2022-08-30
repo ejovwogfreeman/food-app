@@ -50,7 +50,6 @@
     color: white; 
     background-color: #00302E;
     padding: 7px 10px;
-    /* margin-top: 50px; */
     transition: 0.5s ease-in-out;
 }
 
@@ -71,13 +70,6 @@
     margin-bottom: 50px;
 }
 
-/* .eye .input {
-    display: block;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    width: 30px
-} */
-
 .btnShow {
     position: absolute;
     top: 60%;
@@ -86,4 +78,48 @@
     cursor: pointer;
     font-size: 25px;
     display: block;
+    color: black;
+}
+
+@media screen and (max-width: 780px) {
+    .signin-container {
+        display: block;
+        position: relative;
+    }
+    
+    .signin-container .signin-img {
+        position: relative;
+    }
+    
+    .signin-container .signin-img img {
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .signin-container .signin-img .light {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(256, 256, 256, 0.3)
+    }
+
+    .signin-container .signin-text {
+        text-align: center;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+    }
+
+    .signin-container .signin-text form{
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        width: 80%;
+        color: white;
+    }
+
+    .signin-container .signin-text form a{
+        color: white;
+    }
 }
