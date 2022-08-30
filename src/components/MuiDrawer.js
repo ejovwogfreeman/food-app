@@ -21,7 +21,7 @@ const MuiDrawer = () => {
             <Box p={1} width='100%' textAlign='left'>
                 <Typography variant='h6' component='div'>                   
                     <li><Link to="/signin" onClick={()=> setOpenDrawer(false)}><FaSignInAlt style={{marginRight: '10px'}}/>Login</Link></li>
-                    <li><Link to="/signup" onClick={()=> setOpenDrawer(false)}><MdCreateNewFolder style={{marginRight: '10px'}}/>Sign Up</Link></li>
+                    <li><Link to="/signup"  onClick={()=> setOpenDrawer(false)}><MdCreateNewFolder style={{marginRight: '10px'}}/>Sign Up</Link></li>
                 </Typography>
             </Box>
         </Drawer>
