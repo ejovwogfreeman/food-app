@@ -6,7 +6,7 @@ nav {
     z-index: 100;
     width: 100%;
     background-color: rgba(256, 256, 256, 0.8);
-    padding: 50px 5%;
+    padding: 50px 3%;
     color: #eee;
     background-color: #00302E;
     height: 80px;
@@ -74,7 +74,7 @@ li a:hover{
 
 .close-icon{
     position: absolute;
-    top: 3%;
+    top: 5%;
     right: 2%;
     padding: 15px;
     border-radius: 50%;
