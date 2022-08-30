@@ -14,8 +14,8 @@ const Header = () => {
           delivered to you in no time. Affordable, tasty and fast!
         </p>
         <div className="download">
-          <img src={img1} alt="google-play" />
-          <img src={img2} alt="apple-store" />
+          <img src={img1} alt="google-play" className='google'/>
+          <img src={img2} alt="apple-store" className='apple'/>
         </div>
       </div>
       <div className="header-img">

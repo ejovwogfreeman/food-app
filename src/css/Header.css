@@ -41,6 +41,9 @@ header {
         font-size: 30px;
     }
     
+    header {
+        border-bottom: 1px solid rgba(256, 256, 256, 0.5);
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -65,13 +68,23 @@ header {
     }
 
     .header-text .download {
-        display: block;
-    }
-    .header-text .download img {
-        width: 150px;
-        margin-right: 20px;
+        display: flex;
+        align-items: center;
     }
 
+    .header-text .download img {
+        width: 150px;
+        display: block;
+        margin: auto;
+    }
+
+    .header-text .download .google {
+        margin-right: 10px;
+    }
+
+    .header-text .download .apple {
+        margin-left: 10px;
+    }
     
 }
 

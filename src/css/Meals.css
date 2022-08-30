@@ -29,6 +29,7 @@
     .meals-container {
         padding-top: 50px;
         padding-bottom: 20px;
+        border-bottom: 1px solid rgba(256, 256, 256, 0.5);
     }
 
     .meals-container .meals-box {
