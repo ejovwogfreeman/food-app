@@ -38,7 +38,7 @@ const Signin = () => {
      toast.success("Login Successful")
      setInterval(() => {
       window.location='/dashboard'
-     }, 2000);
+     }, 15000);
      
    }else{
      toast.error("Wrong email or password")

@@ -32,8 +32,6 @@ const Signup = () => {
     })
   }
 
-  console.log(form)
-
   const handleSubmit = (e) => {
     e.preventDefault()
     sessionStorage.setItem('user', JSON.stringify(form))
@@ -42,7 +40,7 @@ const Signup = () => {
 
     setInterval(() => {
       window.location= '/signin'
-    }, 1500);
+    }, 15000);
     
   }
 
