@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import img from '../assets/signup.png'
 import '../css/Signin.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
@@ -32,6 +32,8 @@ const Signup = () => {
     })
   }
 
+  const navigate = useNavigate()
+
   const handleSubmit = (e) => {
     e.preventDefault()
     sessionStorage.setItem('user', JSON.stringify(form))
@@ -39,7 +41,7 @@ const Signup = () => {
     toast.success("Sign Up Successful")
 
     setInterval(() => {
-      window.location= '/signin'
+      navigate('/signin')
     }, 2000);
     
   }

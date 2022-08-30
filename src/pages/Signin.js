@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import img from '../assets/signin.png'
 import '../css/Signin.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 
@@ -30,14 +30,18 @@ const Signin = () => {
     })
   }
 
+ const navigate = useNavigate()
+
  const handleSubmit =(e) => {
    e.preventDefault()
    let user = JSON.parse(sessionStorage.getItem('user'))
 
    if (loginData?.email == user?.email && loginData?.password == user?.password){
+
      toast.success("Login Successful")
+     
      setInterval(() => {
-      window.location='/dashboard'
+      navigate('/dashboard')
      }, 2000);
      
    }else{
