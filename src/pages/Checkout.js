@@ -1,8 +1,19 @@
 import React from 'react'
 import Dashboard from './Dashboard.js'
 import "../css/SingleFood.css";
+import { AiOutlineArrowLeft } from 'react-icons/ai'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Checkout = () => {
+
+  const navigate = useNavigate()
+
+  const handleSubmit = (e) => {
+      e.preventDefault()
+      alert("Payment Made Successufully")
+      navigate("/orders")
+  }
+
   return (
     <div className='singlefood-container'>
         <div className="food">        
@@ -10,7 +21,8 @@ const Checkout = () => {
         </div>
         <div className="bg-color"></div>      
         <div className='singlefood'>
-        <form action="">
+        <Link to='/dashboard'><AiOutlineArrowLeft className='go-back'/></Link>
+        <form onSubmit={handleSubmit}>
             <h3>Checkout</h3>
             <input 
               type="number" 

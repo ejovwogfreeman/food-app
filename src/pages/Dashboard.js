@@ -14,7 +14,6 @@ import { CgProfile } from 'react-icons/cg'
 import { AiOutlineGift } from 'react-icons/ai'
 import { HiOutlineShoppingCart } from 'react-icons/hi'
 
-
 const Dashboard = () => {
   let user = JSON.parse(sessionStorage.getItem('user'))
   let timeDay = new Date().getHours()
@@ -108,7 +107,7 @@ const Dashboard = () => {
             {meals.map((meal)=> {
                 return (
                     <div key={meal.id} className="meals">
-                        <img src={meal.image} alt="" />
+                        <Link to='/singlefood'><img src={meal.image} alt="" /></Link>
                         <h5>{meal.title}</h5>
                         <p>{meal.description}</p>
                         <div className="price-action">

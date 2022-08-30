@@ -5,6 +5,8 @@ import img1 from '../assets/burger1.png'
 import img2 from '../assets/pasta1.png'
 import img3 from '../assets/meat1.png' 
 import img4 from '../assets/indomie.png' 
+import { AiOutlineArrowLeft } from 'react-icons/ai'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Cart = () => {
     const meals = [
@@ -50,6 +52,12 @@ const Cart = () => {
         },
     ]
 
+    const navigate = useNavigate()
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        navigate("/checkout")
+    }
 
   return (
     <div className='cart-container'>
@@ -58,6 +66,7 @@ const Cart = () => {
         </div>
         <div className="bg-color"></div>      
         <div className='cart-box'>
+            <Link to='/dashboard'><AiOutlineArrowLeft className='go-back'/></Link>  
             <h3>Your Cart</h3>
             <div className="items">
                 <div className="image">
@@ -88,7 +97,7 @@ const Cart = () => {
                 )
             })}
             <p className="total">Total: &nbsp; <strong className='t-amnt'>₦30,000.00</strong> </p>
-            <button className='button'>Checkout</button>
+            <button className='button' onClick={handleSubmit}>Checkout</button>
         </div>
     </div>
   )

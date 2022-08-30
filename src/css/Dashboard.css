@@ -72,8 +72,7 @@
 
 .dashboard-container .right {
   flex: 4;
-  padding: 100px 3%;
-  /* width: 75%; */
+  padding: 100px 3% 30px;
   margin-left: 25%;
 }
 
@@ -94,6 +93,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 50px;
     text-align: center;
+    padding-bottom: 30px;
 }
 
 .dashboard-container .right .meals-box h3 {

@@ -5,6 +5,8 @@ import img1 from '../assets/burger1.png'
 import img2 from '../assets/pasta1.png'
 import img3 from '../assets/meat1.png' 
 import img4 from '../assets/indomie.png' 
+import { AiOutlineArrowLeft } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 
 const Cart = () => {
     const meals = [
@@ -58,6 +60,7 @@ const Cart = () => {
         </div>
         <div className="bg-color"></div>      
         <div className='cart-box'>
+            <Link to='/dashboard'><AiOutlineArrowLeft className='go-back'/></Link>
             <h3>Your Orders</h3>
             <div className="items">
                 <div className="image">
