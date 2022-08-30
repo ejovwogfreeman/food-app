@@ -40,9 +40,9 @@ const Signup = () => {
 
     toast.success("Sign Up Successful")
 
-    setInterval(() => {
+    // setInterval(() => {
       navigate('/signin')
-    }, 2000);
+    // }, 2000);
     
   }
 

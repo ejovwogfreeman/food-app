@@ -32,37 +32,26 @@ const Signin = () => {
 
  const navigate = useNavigate()
 
- const handleSubmit =(e) => {
-    e.preventDefault()
-    let user = JSON.parse(sessionStorage.getItem('user'))
+const handleSubmit =(e) => {  
 
-    if (loginData?.email == user?.email && loginData?.password == user?.password){
+  e.preventDefault()
+  let user = JSON.parse(sessionStorage.getItem('user'))
+  
+  console.log(loginData.email, loginData.password)
+  console.log(user.email, user.password)
 
-      toast.success("Login Successful")
-      
-      setInterval(() => {
-        navigate('/dashboard')
-      }, 2000);
-      
-    }else{
-      toast.error("Wrong email or password")
-    }
-
+  if (loginData?.email == user?.email && loginData?.password == user?.password){
+    toast.success("Login Successful")
+    // setInterval(() => {
+      navigate('/dashboard')
+    // }, 2000);
+    
+  }else{
+    toast.error("Wrong email or password")
   }
 
-  // const navigate = useNavigate()
+}
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-  //   sessionStorage.setItem('user', JSON.stringify(form))
-
-  //   toast.success("Sign Up Successful")
-
-  //   setInterval(() => {
-  //     navigate('/signin')
-  //   }, 2000);
-    
-  // }
 
 
   return (
