@@ -61,9 +61,9 @@ const Cart = () => {
             <h3>Your Orders</h3>
             <div className="items">
                 <div className="image">
-                    <strong>Item</strong>
+                    <strong className='t-amnt'>Item</strong>
                 </div>
-                <div className="quantity">
+                <div className="quantity" id='end'>
                     <strong>Qty</strong>
                     <strong>Price</strong>
                     <strong>Status </strong>
@@ -79,7 +79,7 @@ const Cart = () => {
                                 <button>{meal.action}</button>
                             </div>
                         </div>
-                        <div className="quantity">
+                        <div className="quantity" id='end'>
                             <strong>{meal.quantity}</strong>
                             <strong>₦{meal.price}</strong>
                             <strong className={meal.status === "Delivered"? "delivered" : "cooking" }>{meal.status}</strong>

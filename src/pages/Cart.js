@@ -61,9 +61,9 @@ const Cart = () => {
             <h3>Your Cart</h3>
             <div className="items">
                 <div className="image">
-                    <strong>Item</strong>
+                    <strong className='t-amnt'>Item</strong>
                 </div>
-                <div className="quantity">
+                <div className="quantity" id='end'>
                     <strong>Qty</strong>
                     <strong>Unit Price</strong>
                     <strong>Sub-total </strong>
@@ -71,7 +71,7 @@ const Cart = () => {
             </div>
            {meals.map((meal)=> {
                 return (
-                    <div key={meal.id} className="items">
+                    <div key={meal.id} className="items" >
                         <div className="image">
                             <img src={meal.image} alt="" />
                             <div className="title">
@@ -79,7 +79,7 @@ const Cart = () => {
                                 <button>{meal.action}</button>
                             </div>
                         </div>
-                        <div className="quantity">
+                        <div className="quantity" id='end'>
                             <strong>{meal.quantity}</strong>
                             <strong>₦{meal.price}</strong>
                             <strong>₦{meal.total}</strong>
@@ -87,7 +87,7 @@ const Cart = () => {
                     </div>
                 )
             })}
-            <p>Total:  <strong>₦30,000.00</strong> </p>
+            <p className="total">Total: &nbsp; <strong className='t-amnt'>₦30,000.00</strong> </p>
             <button className='button'>Checkout</button>
         </div>
     </div>

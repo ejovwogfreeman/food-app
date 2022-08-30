@@ -27,6 +27,7 @@
     padding: 0px 50px;
     font-size: 14px;
     padding-top: 70px;
+    overflow-y: scroll;
 }
 
 .singlefood-container .singlefood img {
@@ -121,4 +122,45 @@
 .singlefood-container form button:hover {
     color: black;
     background-color: #E2B887;
+}
+
+@media screen and (max-width: 1200px) {
+    .singlefood-container .singlefood {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .singlefood-container .singlefood {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .singlefood-container .singlefood {
+        width: 70%;
+        padding: 0px 30px;
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .singlefood-container .singlefood {
+        width: 80%;
+        padding: 0px 20px;
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .singlefood-container .singlefood {
+        width: 85%;
+        padding: 0px 10px;
+        padding-top: 50px;
+        font-size: 13px;
+    }
+    
+    strong {
+        font-size: 12px;
+    }
 }

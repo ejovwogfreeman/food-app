@@ -94,13 +94,15 @@ const Dashboard = () => {
         </ul>
       </div>
       <div className="right">
+      {user ?
         <div className="profile-head">
           <div className="user-name">
             <h3>{timeGreet}, {user?.name}!</h3>
             <p>What delicious meal are you craving today?</p>
           </div>
-          <img src={img7} alt="" /> 
-        </div>
+          <img src={img7} alt="" />
+      </div>  : ''
+      }
 
         <div className='meals-box'>
             {meals.map((meal)=> {

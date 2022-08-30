@@ -1,5 +1,6 @@
 .dashboard-container {
   display: flex;
+  height: 100vh;
 }
 
 .dashboard-container .left {
@@ -126,4 +127,136 @@
 .dashboard-container .right .meals-box .price-action button:hover {
     color: white;
     background-color: #06E775;
+}
+
+@media screen and (max-width: 960px) {
+    .dashboard-container .right .meals-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .dashboard-container .right .meals-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-container .left {
+        width: 200px;
+        height: 100vh;
+        padding: 50px 10px;
+    }
+
+    .dashboard-container .right {
+        padding: 50px 10px;
+        margin-left: 200px;
+      }
+}
+
+@media screen and (max-width: 600px) {
+
+
+    .dashboard-container .left .logo img{
+        width: 35px;
+        display: block;
+    }
+    
+    .dashboard-container .left .logo h2{
+        margin-top: auto;
+        margin-left: 10px;
+        font-size: 20px;
+    }
+    .dashboard-container .right .meals-box {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .dashboard-container .right .profile-head .user-name {
+        text-align: center;
+        display: block;
+    }
+
+    .dashboard-container .right .profile-head img{
+        display: none;
+    }
+
+    .dashboard-container .right .profile-head .user-name h3{
+        font-size: 18px;
+    }
+
+    .dashboard-container .right .profile-head .user-name p{
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+
+    .dashboard-container .left .logo img{
+        width: 35px;
+        display: block;
+    }
+    
+    .dashboard-container .left .logo h2{
+        margin-top: auto;
+        margin-left: 10px;
+        font-size: 20px;
+    }
+    .dashboard-container .right .meals-box {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .dashboard-container .right .profile-head .user-name {
+        text-align: center;
+        display: block;
+    }
+
+    .dashboard-container .left {
+        width: 150px;
+        height: 100vh;
+        padding: 50px 5px;
+    }
+
+    .dashboard-container .right {
+        padding: 50px 10px;
+        margin-left: 150px;
+      }
+
+      .dashboard-container .left ul li{
+        margin: 5px 0px;
+        position: relative;
+    }
+    
+    .dashboard-container .left ul li a{
+        background-color: transparent;
+        border-radius: 5px;
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 14px;
+        padding-left: 3px;
+    }
+    
+    .dashboard-container .left ul li a:hover{
+        background-color: rgb(228, 226, 226);
+        color: black;
+    }
+    
+    .dashboard-container .left ul li a .icon{
+        font-size: 20px;
+        margin-right: 3px;
+    }
+    
+    .dashboard-container .left ul li .x{
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        right: 5px;
+        position: absolute;
+    }
+    
+    .dashboard-container .right .meals-box .price-action button {
+        font-size: 14px;
+        padding: 3px;
+    }
+
 }

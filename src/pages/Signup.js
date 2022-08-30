@@ -40,7 +40,7 @@ const Signup = () => {
 
     setInterval(() => {
       window.location= '/signin'
-    }, 15000);
+    }, 2000);
     
   }
 
