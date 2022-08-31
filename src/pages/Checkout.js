@@ -1,5 +1,5 @@
 import React from 'react'
-import Dashboard from './Dashboard.js'
+import Background from './Background.js'
 import "../css/SingleFood.css";
 import { AiOutlineArrowLeft } from 'react-icons/ai'
 import { Link, useNavigate } from 'react-router-dom'
@@ -17,7 +17,7 @@ const Checkout = () => {
   return (
     <div className='singlefood-container'>
         <div className="food">        
-            <Dashboard/>
+            <Background/>
         </div>
         <div className="bg-color"></div>      
         <div className='singlefood'>

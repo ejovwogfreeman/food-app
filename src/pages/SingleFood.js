@@ -1,5 +1,5 @@
 import React from 'react'
-import Dashboard from './Dashboard.js'
+import Background from './Background.js'
 import "../css/SingleFood.css";
 import img from '../assets/bread.png'
 import {AiFillPlusSquare, AiFillMinusSquare} from 'react-icons/ai'
@@ -10,7 +10,7 @@ const SingleFood = () => {
   return (
     <div className='singlefood-container'>
         <div className="food">        
-            <Dashboard/>
+            <Background/>
         </div>
         <div className="bg-color"></div>      
         <div className='singlefood'>
