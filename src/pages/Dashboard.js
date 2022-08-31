@@ -109,7 +109,7 @@ const Dashboard = ({meals, onAdd, count}) => {
             {meals.map((meal)=> {
                 return (
                     <div key={meal.id} className="meals">
-                        <Link to='/singlefood'><img src={meal.image} alt="" /></Link>
+                        <Link to={`/meal/${meal.id}`} ><img src={meal.image} alt="" /></Link>
                         <h5>{meal.title}</h5>
                         <p>{meal.description}</p>
                         <div className="price-action">

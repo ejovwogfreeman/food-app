@@ -30,8 +30,6 @@ function App() {
         price: 1000,
         action: 'Add to cart',
         remaction: 'remove',
-        quantity: 3,
-        price: 1000,
         status: 'Delivered',
     },
     {
@@ -39,11 +37,9 @@ function App() {
         image: img2,
         title: 'Meat Balls',
         description: 'Meat Balls yada yada yada because of the season',
-        price: 1000,
+        price: 1200,
         action: 'Add to cart',
         remaction: 'remove',
-        quantity: 3,
-        price: 1000,
         status: 'Cooking',
     },
     {
@@ -51,11 +47,9 @@ function App() {
         image: img3,
         title: 'Burger Meal',
         description: 'Burger Meal yada yada yada because of the season',
-        price: 1000,
+        price: 1500,
         action: 'Add to cart',
         remaction: 'remove',
-        quantity: 3,
-        price: 1000,
         status: 'Delivered',
     },
     {
@@ -63,11 +57,9 @@ function App() {
         image: img4,
         title: 'Fried Indomie',
         description: 'Burger Meal yada yada yada because of the season',
-        price: 1000,
+        price: 1250,
         action: 'Add to cart',
         remaction: 'remove',
-        quantity: 3,
-        price: 1000,
         status: 'Cooking',
     },
     {
@@ -75,11 +67,9 @@ function App() {
         image: img5,
         title: 'Baked Bread',
         description: 'Burger Meal yada yada yada because of the season',
-        price: 1000,
+        price: 1350,
         action: 'Add to cart',
         remaction: 'remove',
-        quantity: 3,
-        price: 1000,
         status: 'Delivered',
     },
     {
@@ -87,11 +77,9 @@ function App() {
         image: img6,
         title: 'Soup Meal',
         description: 'Burger Meal yada yada yada because of the season',
-        price: 1000,
+        price: 1100,
         action: 'Add to cart',
         remaction: 'remove',
-        quantity: 3,
-        price: 1000,
         status: 'Cooking',
     },
  ]
@@ -99,7 +87,6 @@ function App() {
  const [cartItems, setCartItems]=useState([]);
 
  const onAdd = (product) => {
-  console.log(product)
   const exist = cartItems.find(x=>x.id===product.id)
   if(exist){
     setCartItems(cartItems.map(x=>x.id===product.id ? {...exist, quantity: exist.quantity + 1} : x))
@@ -189,8 +176,8 @@ function App() {
             element = {<Dashboard meals = {meals} onAdd={onAdd} count = {cartItems.length}/>}
           />
           <Route
-            path='/singlefood'
-            element = {<SingleFood meals={meals} onAdd={onAdd} onRemove={onRemove}/>}
+            path='/meal/:id'
+            element={meals.map(meal => <SingleFood key={meal.id} meal={meal} onAdd={onAdd} onRemove={onRemove} quantity={cartItems}/>)}
           />
           <Route
             path='/checkout'
