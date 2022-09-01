@@ -164,3 +164,11 @@
         font-size: 12px;
     }
 }
+
+.h5-link {
+    color: black;
+}
+
+.h5-link:hover {
+    color: black;
+}

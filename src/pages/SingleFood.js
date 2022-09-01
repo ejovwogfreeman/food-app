@@ -32,11 +32,13 @@ const SingleFood = ({meal, onAdd, onRemove, quantity}) => {
                 <div className='action'> 
                     <div className='quantity'>
                         {quantity.map((x)=> {
-                            return (
-                                <>
-                                    {x.quantity ? <><AiFillMinusSquare className='icon' onClick={()=>onRemove(meal)}/><p>{x.quantity}</p><AiFillPlusSquare className='icon' onClick={()=>onAdd(meal)}/></> : " "} 
-                                </>
-                            )
+                            if(x.id == id){
+                                return (
+                                    <>
+                                        {x.quantity ? <><AiFillMinusSquare className='icon' onClick={()=>onRemove(meal)}/><p>{x.quantity}</p><AiFillPlusSquare className='icon' onClick={()=>onAdd(meal)}/></> : " "} 
+                                    </>
+                                )
+                            }
                         })}
                     </div>
                     <button onClick={()=> onAdd(meal)}>Add to cart</button>

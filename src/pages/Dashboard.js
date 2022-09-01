@@ -110,7 +110,7 @@ const Dashboard = ({meals, onAdd, count}) => {
                 return (
                     <div key={meal.id} className="meals">
                         <Link to={`/meal/${meal.id}`} ><img src={meal.image} alt="" /></Link>
-                        <h5>{meal.title}</h5>
+                        <Link to={`/meal/${meal.id}`} className="h5-link"><h5>{meal.title}</h5></Link>
                         <p>{meal.description}</p>
                         <div className="price-action">
                           <strong>₦{meal.price}</strong>
