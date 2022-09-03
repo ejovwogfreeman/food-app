@@ -12,12 +12,15 @@ import SingleFood from "./pages/SingleFood";
 import Checkout from "./pages/Checkout";
 import Cart from "./pages/Cart";
 import Orders from "./pages/Orders";
+import Profile from "./pages/Profile";
+import Page404 from "./pages/Page404";
 import img1 from './assets/burger1.png'
 import img2 from './assets/pasta1.png'
 import img3 from './assets/meat1.png' 
 import img4 from './assets/indomie.png' 
 import img5 from './assets/bread.png'
 import img6 from './assets/soup.png'
+import ProtectedRoutes from "./components/ProtectedRoutes";
 
 function App() {
 
@@ -104,55 +107,25 @@ function App() {
   }
  }
   
-  const [show, setShow] = useState(-100);
-  const goUp = () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  };
-  useEffect(() => {
-    window.addEventListener(
-      "scroll",
-      (scroll = () => {
-        let top = window.pageYOffset || document.documentElement.scrollTop;
-        if (top > 500) {
-          setShow(10);
-        } else {
-          setShow(-100);
-        }
-      })
-    );
-    //goUp();
+ const [show, setShow] = useState(-100);
+ const goUp = () => {
+   document.body.scrollTop = 0;
+   document.documentElement.scrollTop = 0;
+ };
+ useEffect(() => {
+   window.addEventListener(
+     "scroll",
+     (() => {
+       let top = window.pageYOffset || document.documentElement.scrollTop;
+       if (top > 500) {
+         setShow(10);
+       } else {
+         setShow(-100);
+       }
+     })
+   );
+ }, []);
 
-    try {
-      let data = JSON.parse(localStorage.getItem("token"));
-      //console.log(data)
-      if (data) {
-        fetch(process.env.REACT_APP_API_URL + "api/user", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            "auth-token": data.data,
-          },
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            //console.log(data)
-            setUsername(data.username);
-            setAffiliate(data.affiliate);
-            setCart(data.cart.length);
-            setEmail(data.email);
-          })
-          .catch((error) => {
-            //console.log(error);
-            return;
-          });
-      }
-    } catch (error) {
-      //console.log(error);
-      return;
-    }
-    return () => window.removeEventListener("scroll", scroll);
-  }, []);
   return (
     <Router>
       {/* <Navbar/> */}
@@ -161,8 +134,7 @@ function App() {
             exact
             path="/"
             element={<Home/>}
-          />
-          {/* {<Route path="/*" element={<Page404 />} /> } */}
+          />          
           <Route
             path='/signup'
             element = {<Signup/>}
@@ -171,9 +143,15 @@ function App() {
             path='/signin'
             element = {<Signin/>}
           />
+          <Route element={<ProtectedRoutes/>}>
+            <Route
+              path='/dashboard'
+              element = {<Dashboard meals = {meals} onAdd={onAdd} count = {cartItems.length}/>}
+            />
+          </Route>
           <Route
-            path='/dashboard'
-            element = {<Dashboard meals = {meals} onAdd={onAdd} count = {cartItems.length}/>}
+            path='/profile'
+            element = {<Profile/>}
           />
           <Route
             path='/meal/:id'
@@ -191,6 +169,7 @@ function App() {
             path='/orders'
             element = {<Orders meals = {meals} onRemove={onRemove}/>}
           />
+          <Route path="*" element={<Page404 />} />
         </Routes>
         <Box
           sx={{
